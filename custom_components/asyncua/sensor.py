@@ -94,6 +94,7 @@ async def async_setup_platform(
                     node_id=val_sensor[CONF_NODE_ID],
                     device_class=val_sensor.get(CONF_NODE_DEVICE_CLASS),
                     unit_of_measurement=val_sensor.get(CONF_NODE_UNIT_OF_MEASUREMENT),
+                    state_class=val_sensor.get(CONF_NODE_STATE_CLASS)
                 )
             )
     async_add_entities(new_entities=asyncua_sensors)
